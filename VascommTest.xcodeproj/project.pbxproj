@@ -13,9 +13,12 @@
 		27A536622AA879B100B39EB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27A536602AA879B100B39EB7 /* Main.storyboard */; };
 		27A536642AA879B200B39EB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27A536632AA879B200B39EB7 /* Assets.xcassets */; };
 		27A536672AA879B200B39EB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27A536652AA879B200B39EB7 /* LaunchScreen.storyboard */; };
+		8CB5164D8D80F535106FBE8C /* Pods_VascommTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 081951732D0169E88360F480 /* Pods_VascommTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		081951732D0169E88360F480 /* Pods_VascommTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VascommTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B4C7ADF7DC6D8E69B13D9F1 /* Pods-VascommTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VascommTest.release.xcconfig"; path = "Target Support Files/Pods-VascommTest/Pods-VascommTest.release.xcconfig"; sourceTree = "<group>"; };
 		27A536572AA879B100B39EB7 /* VascommTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VascommTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27A5365A2AA879B100B39EB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27A5365C2AA879B100B39EB7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		27A536632AA879B200B39EB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27A536662AA879B200B39EB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27A536682AA879B200B39EB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4AED7C51F31A82A9A632880E /* Pods-VascommTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VascommTest.debug.xcconfig"; path = "Target Support Files/Pods-VascommTest/Pods-VascommTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CB5164D8D80F535106FBE8C /* Pods_VascommTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				27A536592AA879B100B39EB7 /* VascommTest */,
 				27A536582AA879B100B39EB7 /* Products */,
+				822D951B0CB1814BF698E791 /* Pods */,
+				3656E0F65251050D37390DBA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,24 @@
 			path = VascommTest;
 			sourceTree = "<group>";
 		};
+		3656E0F65251050D37390DBA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				081951732D0169E88360F480 /* Pods_VascommTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		822D951B0CB1814BF698E791 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4AED7C51F31A82A9A632880E /* Pods-VascommTest.debug.xcconfig */,
+				0B4C7ADF7DC6D8E69B13D9F1 /* Pods-VascommTest.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 27A5366B2AA879B200B39EB7 /* Build configuration list for PBXNativeTarget "VascommTest" */;
 			buildPhases = (
+				71B4ADEF098EBF8AADC72F57 /* [CP] Check Pods Manifest.lock */,
 				27A536532AA879B100B39EB7 /* Sources */,
 				27A536542AA879B100B39EB7 /* Frameworks */,
 				27A536552AA879B100B39EB7 /* Resources */,
+				FCEA072E272150A3CFCEAAA5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		71B4ADEF098EBF8AADC72F57 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VascommTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FCEA072E272150A3CFCEAAA5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VascommTest/Pods-VascommTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VascommTest/Pods-VascommTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VascommTest/Pods-VascommTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		27A536532AA879B100B39EB7 /* Sources */ = {
@@ -216,7 +285,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -270,7 +339,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -282,6 +351,7 @@
 		};
 		27A5366C2AA879B200B39EB7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AED7C51F31A82A9A632880E /* Pods-VascommTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -309,6 +379,7 @@
 		};
 		27A5366D2AA879B200B39EB7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B4C7ADF7DC6D8E69B13D9F1 /* Pods-VascommTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
