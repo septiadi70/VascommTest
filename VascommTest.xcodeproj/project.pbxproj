@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		271AFF582AA8866200610D8B /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271AFF572AA8866200610D8B /* NetworkService.swift */; };
+		271AFF5B2AA8AC6D00610D8B /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271AFF5A2AA8AC6D00610D8B /* LoginResponse.swift */; };
+		271AFF5F2AA8ACB900610D8B /* LoginRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271AFF5E2AA8ACB900610D8B /* LoginRequestModel.swift */; };
+		271AFF622AA8ACEC00610D8B /* EndpointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271AFF612AA8ACEC00610D8B /* EndpointProtocol.swift */; };
+		271AFF642AA8ADA000610D8B /* AuthEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271AFF632AA8ADA000610D8B /* AuthEndpoint.swift */; };
+		271AFF662AA8AF8F00610D8B /* RequestModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271AFF652AA8AF8F00610D8B /* RequestModelProtocol.swift */; };
+		271AFF692AA8AFB500610D8B /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271AFF682AA8AFB500610D8B /* AppError.swift */; };
 		27A5365B2AA879B100B39EB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A5365A2AA879B100B39EB7 /* AppDelegate.swift */; };
 		27A5365D2AA879B100B39EB7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A5365C2AA879B100B39EB7 /* SceneDelegate.swift */; };
 		27A5365F2AA879B100B39EB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A5365E2AA879B100B39EB7 /* ViewController.swift */; };
@@ -19,6 +26,13 @@
 /* Begin PBXFileReference section */
 		081951732D0169E88360F480 /* Pods_VascommTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VascommTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B4C7ADF7DC6D8E69B13D9F1 /* Pods-VascommTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VascommTest.release.xcconfig"; path = "Target Support Files/Pods-VascommTest/Pods-VascommTest.release.xcconfig"; sourceTree = "<group>"; };
+		271AFF572AA8866200610D8B /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		271AFF5A2AA8AC6D00610D8B /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		271AFF5E2AA8ACB900610D8B /* LoginRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequestModel.swift; sourceTree = "<group>"; };
+		271AFF612AA8ACEC00610D8B /* EndpointProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointProtocol.swift; sourceTree = "<group>"; };
+		271AFF632AA8ADA000610D8B /* AuthEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthEndpoint.swift; sourceTree = "<group>"; };
+		271AFF652AA8AF8F00610D8B /* RequestModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestModelProtocol.swift; sourceTree = "<group>"; };
+		271AFF682AA8AFB500610D8B /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		27A536572AA879B100B39EB7 /* VascommTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VascommTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27A5365A2AA879B100B39EB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27A5365C2AA879B100B39EB7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +56,66 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		271AFF552AA8823100610D8B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				271AFF562AA8824100610D8B /* Network */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		271AFF562AA8824100610D8B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				271AFF602AA8ACD700610D8B /* Endpoints */,
+				271AFF572AA8866200610D8B /* NetworkService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		271AFF592AA8AC5C00610D8B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				271AFF5D2AA8AC9C00610D8B /* Request */,
+				271AFF5C2AA8AC9100610D8B /* Response */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		271AFF5C2AA8AC9100610D8B /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				271AFF5A2AA8AC6D00610D8B /* LoginResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		271AFF5D2AA8AC9C00610D8B /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				271AFF652AA8AF8F00610D8B /* RequestModelProtocol.swift */,
+				271AFF5E2AA8ACB900610D8B /* LoginRequestModel.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		271AFF602AA8ACD700610D8B /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				271AFF612AA8ACEC00610D8B /* EndpointProtocol.swift */,
+				271AFF632AA8ADA000610D8B /* AuthEndpoint.swift */,
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		271AFF672AA8AFA700610D8B /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				271AFF682AA8AFB500610D8B /* AppError.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		27A5364E2AA879B100B39EB7 = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +137,9 @@
 		27A536592AA879B100B39EB7 /* VascommTest */ = {
 			isa = PBXGroup;
 			children = (
+				271AFF672AA8AFA700610D8B /* Helper */,
+				271AFF592AA8AC5C00610D8B /* Model */,
+				271AFF552AA8823100610D8B /* Service */,
 				27A5365A2AA879B100B39EB7 /* AppDelegate.swift */,
 				27A5365C2AA879B100B39EB7 /* SceneDelegate.swift */,
 				27A5365E2AA879B100B39EB7 /* ViewController.swift */,
@@ -88,7 +165,6 @@
 				4AED7C51F31A82A9A632880E /* Pods-VascommTest.debug.xcconfig */,
 				0B4C7ADF7DC6D8E69B13D9F1 /* Pods-VascommTest.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -207,9 +283,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				271AFF662AA8AF8F00610D8B /* RequestModelProtocol.swift in Sources */,
+				271AFF642AA8ADA000610D8B /* AuthEndpoint.swift in Sources */,
+				271AFF692AA8AFB500610D8B /* AppError.swift in Sources */,
 				27A5365F2AA879B100B39EB7 /* ViewController.swift in Sources */,
 				27A5365B2AA879B100B39EB7 /* AppDelegate.swift in Sources */,
+				271AFF582AA8866200610D8B /* NetworkService.swift in Sources */,
+				271AFF5F2AA8ACB900610D8B /* LoginRequestModel.swift in Sources */,
 				27A5365D2AA879B100B39EB7 /* SceneDelegate.swift in Sources */,
+				271AFF5B2AA8AC6D00610D8B /* LoginResponse.swift in Sources */,
+				271AFF622AA8ACEC00610D8B /* EndpointProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
