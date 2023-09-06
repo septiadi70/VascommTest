@@ -15,6 +15,12 @@
 		271AFF662AA8AF8F00610D8B /* RequestModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271AFF652AA8AF8F00610D8B /* RequestModelProtocol.swift */; };
 		271AFF692AA8AFB500610D8B /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271AFF682AA8AFB500610D8B /* AppError.swift */; };
 		271AFF6B2AA8B05500610D8B /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271AFF6A2AA8B05500610D8B /* KeychainManager.swift */; };
+		271AFF732AA8B65800610D8B /* AuthRemoteDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271AFF722AA8B65800610D8B /* AuthRemoteDataSourceProtocol.swift */; };
+		271AFF752AA8B66400610D8B /* AuthRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271AFF742AA8B66400610D8B /* AuthRemoteDataSource.swift */; };
+		271AFF782AA8B80500610D8B /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271AFF772AA8B80500610D8B /* AuthRepository.swift */; };
+		271AFF7A2AA8B80F00610D8B /* AuthRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271AFF792AA8B80F00610D8B /* AuthRepositoryProtocol.swift */; };
+		271AFF7D2AA8BE2700610D8B /* LoginUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271AFF7C2AA8BE2700610D8B /* LoginUseCaseProtocol.swift */; };
+		271AFF7F2AA8BE3700610D8B /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271AFF7E2AA8BE3700610D8B /* LoginUseCase.swift */; };
 		27A5365B2AA879B100B39EB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A5365A2AA879B100B39EB7 /* AppDelegate.swift */; };
 		27A5365D2AA879B100B39EB7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A5365C2AA879B100B39EB7 /* SceneDelegate.swift */; };
 		27A5365F2AA879B100B39EB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A5365E2AA879B100B39EB7 /* ViewController.swift */; };
@@ -35,6 +41,12 @@
 		271AFF652AA8AF8F00610D8B /* RequestModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestModelProtocol.swift; sourceTree = "<group>"; };
 		271AFF682AA8AFB500610D8B /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		271AFF6A2AA8B05500610D8B /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		271AFF722AA8B65800610D8B /* AuthRemoteDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRemoteDataSourceProtocol.swift; sourceTree = "<group>"; };
+		271AFF742AA8B66400610D8B /* AuthRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRemoteDataSource.swift; sourceTree = "<group>"; };
+		271AFF772AA8B80500610D8B /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
+		271AFF792AA8B80F00610D8B /* AuthRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepositoryProtocol.swift; sourceTree = "<group>"; };
+		271AFF7C2AA8BE2700610D8B /* LoginUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCaseProtocol.swift; sourceTree = "<group>"; };
+		271AFF7E2AA8BE3700610D8B /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
 		27A536572AA879B100B39EB7 /* VascommTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VascommTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27A5365A2AA879B100B39EB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27A5365C2AA879B100B39EB7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +131,42 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		271AFF6C2AA8B5E300610D8B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				271AFF762AA8B7F500610D8B /* Repository */,
+				271AFF6D2AA8B5FD00610D8B /* DataSource */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		271AFF6D2AA8B5FD00610D8B /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				271AFF722AA8B65800610D8B /* AuthRemoteDataSourceProtocol.swift */,
+				271AFF742AA8B66400610D8B /* AuthRemoteDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		271AFF762AA8B7F500610D8B /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				271AFF792AA8B80F00610D8B /* AuthRepositoryProtocol.swift */,
+				271AFF772AA8B80500610D8B /* AuthRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		271AFF7B2AA8BE1500610D8B /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				271AFF7C2AA8BE2700610D8B /* LoginUseCaseProtocol.swift */,
+				271AFF7E2AA8BE3700610D8B /* LoginUseCase.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
 		27A5364E2AA879B100B39EB7 = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +188,8 @@
 		27A536592AA879B100B39EB7 /* VascommTest */ = {
 			isa = PBXGroup;
 			children = (
+				271AFF7B2AA8BE1500610D8B /* Domain */,
+				271AFF6C2AA8B5E300610D8B /* Data */,
 				271AFF672AA8AFA700610D8B /* Helper */,
 				271AFF592AA8AC5C00610D8B /* Model */,
 				271AFF552AA8823100610D8B /* Service */,
@@ -286,15 +336,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				271AFF752AA8B66400610D8B /* AuthRemoteDataSource.swift in Sources */,
 				271AFF662AA8AF8F00610D8B /* RequestModelProtocol.swift in Sources */,
+				271AFF7F2AA8BE3700610D8B /* LoginUseCase.swift in Sources */,
 				271AFF642AA8ADA000610D8B /* AuthEndpoint.swift in Sources */,
 				271AFF692AA8AFB500610D8B /* AppError.swift in Sources */,
 				27A5365F2AA879B100B39EB7 /* ViewController.swift in Sources */,
 				27A5365B2AA879B100B39EB7 /* AppDelegate.swift in Sources */,
 				271AFF582AA8866200610D8B /* NetworkService.swift in Sources */,
+				271AFF7A2AA8B80F00610D8B /* AuthRepositoryProtocol.swift in Sources */,
 				271AFF6B2AA8B05500610D8B /* KeychainManager.swift in Sources */,
+				271AFF7D2AA8BE2700610D8B /* LoginUseCaseProtocol.swift in Sources */,
 				271AFF5F2AA8ACB900610D8B /* LoginRequestModel.swift in Sources */,
+				271AFF732AA8B65800610D8B /* AuthRemoteDataSourceProtocol.swift in Sources */,
 				27A5365D2AA879B100B39EB7 /* SceneDelegate.swift in Sources */,
+				271AFF782AA8B80500610D8B /* AuthRepository.swift in Sources */,
 				271AFF5B2AA8AC6D00610D8B /* LoginResponse.swift in Sources */,
 				271AFF622AA8ACEC00610D8B /* EndpointProtocol.swift in Sources */,
 			);
