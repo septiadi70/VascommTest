@@ -8,6 +8,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let appDelegate = UIApplication.shared.delegate as? AppDelegate
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,10 +19,12 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        let loginViewController = LoginViewController()
-        let navController = UINavigationController(rootViewController: loginViewController)
-        navController.modalPresentationStyle = .fullScreen
-        present(navController, animated: true)
+        if let appDelegate,
+            let loginViewController = appDelegate.container.resolve(LoginViewController.self) {
+            let navController = UINavigationController(rootViewController: loginViewController)
+            navController.modalPresentationStyle = .fullScreen
+            present(navController, animated: true)
+        }
     }
 }
 

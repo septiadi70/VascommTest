@@ -29,6 +29,8 @@
 		277C108B2AA94D2A000F8DC1 /* FormLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277C108A2AA94D2A000F8DC1 /* FormLabel.swift */; };
 		277C10BF2AA952E4000F8DC1 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 277C10BD2AA952E4000F8DC1 /* Montserrat-SemiBold.ttf */; };
 		277C10C02AA952E4000F8DC1 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 277C10BE2AA952E4000F8DC1 /* Montserrat-Regular.ttf */; };
+		27849ED92AA9689F0026EE9B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27849ED72AA9689F0026EE9B /* RegisterViewController.swift */; };
+		27849EDA2AA9689F0026EE9B /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27849ED82AA9689F0026EE9B /* RegisterViewController.xib */; };
 		27A5365B2AA879B100B39EB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A5365A2AA879B100B39EB7 /* AppDelegate.swift */; };
 		27A5365D2AA879B100B39EB7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A5365C2AA879B100B39EB7 /* SceneDelegate.swift */; };
 		27A5365F2AA879B100B39EB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A5365E2AA879B100B39EB7 /* ViewController.swift */; };
@@ -63,6 +65,8 @@
 		277C108A2AA94D2A000F8DC1 /* FormLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormLabel.swift; sourceTree = "<group>"; };
 		277C10BD2AA952E4000F8DC1 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		277C10BE2AA952E4000F8DC1 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		27849ED72AA9689F0026EE9B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		27849ED82AA9689F0026EE9B /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		27A536572AA879B100B39EB7 /* VascommTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VascommTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27A5365A2AA879B100B39EB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27A5365C2AA879B100B39EB7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -187,6 +191,7 @@
 		271AFF802AA8C2D300610D8B /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				27849ED62AA968930026EE9B /* Register */,
 				271AFF862AA8C3D200610D8B /* SubView */,
 				271AFF812AA8C30A00610D8B /* Login */,
 			);
@@ -259,6 +264,15 @@
 				277C10BD2AA952E4000F8DC1 /* Montserrat-SemiBold.ttf */,
 			);
 			path = Montserrat;
+			sourceTree = "<group>";
+		};
+		27849ED62AA968930026EE9B /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				27849ED72AA9689F0026EE9B /* RegisterViewController.swift */,
+				27849ED82AA9689F0026EE9B /* RegisterViewController.xib */,
+			);
+			path = Register;
 			sourceTree = "<group>";
 		};
 		27A5364E2AA879B100B39EB7 = {
@@ -379,6 +393,7 @@
 			files = (
 				277C10C02AA952E4000F8DC1 /* Montserrat-Regular.ttf in Resources */,
 				271AFF852AA8C32E00610D8B /* LoginViewController.xib in Resources */,
+				27849EDA2AA9689F0026EE9B /* RegisterViewController.xib in Resources */,
 				27A536672AA879B200B39EB7 /* LaunchScreen.storyboard in Resources */,
 				27A536642AA879B200B39EB7 /* Assets.xcassets in Resources */,
 				27A536622AA879B100B39EB7 /* Main.storyboard in Resources */,
@@ -449,6 +464,7 @@
 				271AFF8E2AA8E25200610D8B /* FormTextField.swift in Sources */,
 				271AFF892AA8C45F00610D8B /* SubmitButton.swift in Sources */,
 				271AFF6B2AA8B05500610D8B /* KeychainManager.swift in Sources */,
+				27849ED92AA9689F0026EE9B /* RegisterViewController.swift in Sources */,
 				271AFF7D2AA8BE2700610D8B /* LoginUseCaseProtocol.swift in Sources */,
 				271AFF5F2AA8ACB900610D8B /* LoginRequestModel.swift in Sources */,
 				271AFF732AA8B65800610D8B /* AuthRemoteDataSourceProtocol.swift in Sources */,

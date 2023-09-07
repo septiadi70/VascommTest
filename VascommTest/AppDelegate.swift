@@ -6,11 +6,17 @@
 //
 
 import UIKit
+import Swinject
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    let container: Container = {
+        let container = Container()
+        container.register(LoginViewController.self) { _ in LoginViewController() }
+        container.register(RegisterViewController.self) { _ in RegisterViewController() }
+        return container
+    }()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

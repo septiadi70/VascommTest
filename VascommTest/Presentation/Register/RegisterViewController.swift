@@ -1,28 +1,37 @@
 //
-//  LoginViewController.swift
+//  RegisterViewController.swift
 //  VascommTest
 //
-//  Created by Andi Septiadi on 06/09/23.
+//  Created by Andi Septiadi on 07/09/23.
 //
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class RegisterViewController: UIViewController {
     
+    @IBOutlet weak var firstNameTextField: FormTextField!
+    @IBOutlet weak var lastNameTextField: FormTextField!
+    @IBOutlet weak var idCardTextField: FormTextField!
     @IBOutlet weak var emailTextField: FormTextField!
+    @IBOutlet weak var phoneTextField: FormTextField!
     @IBOutlet weak var passwordTextField: FormTextField!
-    
-    let appDelegate = UIApplication.shared.delegate as? AppDelegate
+    @IBOutlet weak var retypeTextField: FormTextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.setNavigationBarHidden(true, animated: true)
-        
+        firstNameTextField.delegate = self
+        lastNameTextField.delegate = self
+        idCardTextField.delegate = self
         emailTextField.delegate = self
+        phoneTextField.delegate = self
         
         passwordTextField.setType(.hidePassword)
         passwordTextField.actionDelegate = self
         passwordTextField.delegate = self
+        
+        retypeTextField.setType(.hidePassword)
+        retypeTextField.actionDelegate = self
+        retypeTextField.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,19 +49,12 @@ class LoginViewController: UIViewController {
 
 // MARK: - Actions
 
-extension LoginViewController {
-    @IBAction func forgotButtonTapped(_ sender: UIButton) {}
-    
-    @IBAction func loginButtonTapped(_ sender: UIButton) {}
-    
-    @IBAction func registerButtonTapped(_ sender: UIButton) {
-        if let registerViewController = appDelegate?
-            .container
-            .resolve(RegisterViewController.self) {
-            navigationController?
-                .pushViewController(registerViewController, animated: true)
-        }
+extension RegisterViewController {
+    @IBAction func loginButtonTapped(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
     }
+    
+    @IBAction func registerButtonTapped(_ sender: UIButton) {}
     
     @objc func keyboardWillShow(_ notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
@@ -71,7 +73,7 @@ extension LoginViewController {
 
 // MARK: - FormTextFieldDelegate
 
-extension LoginViewController: FormTextFieldDelegate {
+extension RegisterViewController: FormTextFieldDelegate {
     func formTextField(_ textField: FormTextField, didButtonTappedWithType type: AuthFormTextFieldType) {
         
     }
@@ -79,7 +81,7 @@ extension LoginViewController: FormTextFieldDelegate {
 
 // MARK: - UITextFieldDelegate
 
-extension LoginViewController: UITextFieldDelegate {
+extension RegisterViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
