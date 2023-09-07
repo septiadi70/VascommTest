@@ -31,6 +31,18 @@
 		277C10C02AA952E4000F8DC1 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 277C10BE2AA952E4000F8DC1 /* Montserrat-Regular.ttf */; };
 		27849ED92AA9689F0026EE9B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27849ED72AA9689F0026EE9B /* RegisterViewController.swift */; };
 		27849EDA2AA9689F0026EE9B /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27849ED82AA9689F0026EE9B /* RegisterViewController.xib */; };
+		27849EDE2AA975F70026EE9B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27849EDC2AA975F70026EE9B /* HomeViewController.swift */; };
+		27849EDF2AA975F70026EE9B /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27849EDD2AA975F70026EE9B /* HomeViewController.xib */; };
+		27849EE32AA979590026EE9B /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27849EE12AA979590026EE9B /* SideMenuViewController.swift */; };
+		27849EE42AA979590026EE9B /* SideMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27849EE22AA979590026EE9B /* SideMenuViewController.xib */; };
+		27849EE62AA980490026EE9B /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 27849EE52AA980480026EE9B /* Montserrat-Bold.ttf */; };
+		27849EEC2AA989A20026EE9B /* MenuProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27849EEA2AA989A20026EE9B /* MenuProfileTableViewCell.swift */; };
+		27849EED2AA989A20026EE9B /* MenuProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27849EEB2AA989A20026EE9B /* MenuProfileTableViewCell.xib */; };
+		27849EF02AA99F6F0026EE9B /* MenuItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27849EEE2AA99F6F0026EE9B /* MenuItemTableViewCell.swift */; };
+		27849EF12AA99F6F0026EE9B /* MenuItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27849EEF2AA99F6F0026EE9B /* MenuItemTableViewCell.xib */; };
+		27849EF42AA9A26C0026EE9B /* MenuLogoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27849EF22AA9A26C0026EE9B /* MenuLogoutTableViewCell.swift */; };
+		27849EF52AA9A26C0026EE9B /* MenuLogoutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27849EF32AA9A26C0026EE9B /* MenuLogoutTableViewCell.xib */; };
+		27849EF72AA9A5400026EE9B /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 27849EF62AA9A5400026EE9B /* Montserrat-Medium.ttf */; };
 		27A5365B2AA879B100B39EB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A5365A2AA879B100B39EB7 /* AppDelegate.swift */; };
 		27A5365D2AA879B100B39EB7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A5365C2AA879B100B39EB7 /* SceneDelegate.swift */; };
 		27A5365F2AA879B100B39EB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A5365E2AA879B100B39EB7 /* ViewController.swift */; };
@@ -67,6 +79,18 @@
 		277C10BE2AA952E4000F8DC1 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		27849ED72AA9689F0026EE9B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		27849ED82AA9689F0026EE9B /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		27849EDC2AA975F70026EE9B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		27849EDD2AA975F70026EE9B /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		27849EE12AA979590026EE9B /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
+		27849EE22AA979590026EE9B /* SideMenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenuViewController.xib; sourceTree = "<group>"; };
+		27849EE52AA980480026EE9B /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		27849EEA2AA989A20026EE9B /* MenuProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuProfileTableViewCell.swift; sourceTree = "<group>"; };
+		27849EEB2AA989A20026EE9B /* MenuProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuProfileTableViewCell.xib; sourceTree = "<group>"; };
+		27849EEE2AA99F6F0026EE9B /* MenuItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemTableViewCell.swift; sourceTree = "<group>"; };
+		27849EEF2AA99F6F0026EE9B /* MenuItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuItemTableViewCell.xib; sourceTree = "<group>"; };
+		27849EF22AA9A26C0026EE9B /* MenuLogoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuLogoutTableViewCell.swift; sourceTree = "<group>"; };
+		27849EF32AA9A26C0026EE9B /* MenuLogoutTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuLogoutTableViewCell.xib; sourceTree = "<group>"; };
+		27849EF62AA9A5400026EE9B /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		27A536572AA879B100B39EB7 /* VascommTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VascommTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27A5365A2AA879B100B39EB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27A5365C2AA879B100B39EB7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -191,6 +215,8 @@
 		271AFF802AA8C2D300610D8B /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				27849EE02AA9794B0026EE9B /* SideMenu */,
+				27849EDB2AA975E90026EE9B /* Home */,
 				27849ED62AA968930026EE9B /* Register */,
 				271AFF862AA8C3D200610D8B /* SubView */,
 				271AFF812AA8C30A00610D8B /* Login */,
@@ -210,6 +236,7 @@
 		271AFF862AA8C3D200610D8B /* SubView */ = {
 			isa = PBXGroup;
 			children = (
+				27849EE92AA989830026EE9B /* TableCell */,
 				277C10892AA94D19000F8DC1 /* Label */,
 				271AFF8C2AA8E23C00610D8B /* TextField */,
 				271AFF872AA8C3FD00610D8B /* Button */,
@@ -262,6 +289,8 @@
 			children = (
 				277C10BE2AA952E4000F8DC1 /* Montserrat-Regular.ttf */,
 				277C10BD2AA952E4000F8DC1 /* Montserrat-SemiBold.ttf */,
+				27849EE52AA980480026EE9B /* Montserrat-Bold.ttf */,
+				27849EF62AA9A5400026EE9B /* Montserrat-Medium.ttf */,
 			);
 			path = Montserrat;
 			sourceTree = "<group>";
@@ -273,6 +302,37 @@
 				27849ED82AA9689F0026EE9B /* RegisterViewController.xib */,
 			);
 			path = Register;
+			sourceTree = "<group>";
+		};
+		27849EDB2AA975E90026EE9B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				27849EDC2AA975F70026EE9B /* HomeViewController.swift */,
+				27849EDD2AA975F70026EE9B /* HomeViewController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		27849EE02AA9794B0026EE9B /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				27849EE12AA979590026EE9B /* SideMenuViewController.swift */,
+				27849EE22AA979590026EE9B /* SideMenuViewController.xib */,
+			);
+			path = SideMenu;
+			sourceTree = "<group>";
+		};
+		27849EE92AA989830026EE9B /* TableCell */ = {
+			isa = PBXGroup;
+			children = (
+				27849EEA2AA989A20026EE9B /* MenuProfileTableViewCell.swift */,
+				27849EEB2AA989A20026EE9B /* MenuProfileTableViewCell.xib */,
+				27849EEE2AA99F6F0026EE9B /* MenuItemTableViewCell.swift */,
+				27849EEF2AA99F6F0026EE9B /* MenuItemTableViewCell.xib */,
+				27849EF22AA9A26C0026EE9B /* MenuLogoutTableViewCell.swift */,
+				27849EF32AA9A26C0026EE9B /* MenuLogoutTableViewCell.xib */,
+			);
+			path = TableCell;
 			sourceTree = "<group>";
 		};
 		27A5364E2AA879B100B39EB7 = {
@@ -391,13 +451,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27849EE62AA980490026EE9B /* Montserrat-Bold.ttf in Resources */,
 				277C10C02AA952E4000F8DC1 /* Montserrat-Regular.ttf in Resources */,
 				271AFF852AA8C32E00610D8B /* LoginViewController.xib in Resources */,
 				27849EDA2AA9689F0026EE9B /* RegisterViewController.xib in Resources */,
 				27A536672AA879B200B39EB7 /* LaunchScreen.storyboard in Resources */,
+				27849EED2AA989A20026EE9B /* MenuProfileTableViewCell.xib in Resources */,
 				27A536642AA879B200B39EB7 /* Assets.xcassets in Resources */,
 				27A536622AA879B100B39EB7 /* Main.storyboard in Resources */,
 				277C10BF2AA952E4000F8DC1 /* Montserrat-SemiBold.ttf in Resources */,
+				27849EF52AA9A26C0026EE9B /* MenuLogoutTableViewCell.xib in Resources */,
+				27849EF72AA9A5400026EE9B /* Montserrat-Medium.ttf in Resources */,
+				27849EF12AA99F6F0026EE9B /* MenuItemTableViewCell.xib in Resources */,
+				27849EDF2AA975F70026EE9B /* HomeViewController.xib in Resources */,
+				27849EE42AA979590026EE9B /* SideMenuViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,7 +520,9 @@
 				271AFF842AA8C32E00610D8B /* LoginViewController.swift in Sources */,
 				271AFF752AA8B66400610D8B /* AuthRemoteDataSource.swift in Sources */,
 				271AFF662AA8AF8F00610D8B /* RequestModelProtocol.swift in Sources */,
+				27849EF02AA99F6F0026EE9B /* MenuItemTableViewCell.swift in Sources */,
 				271AFF7F2AA8BE3700610D8B /* LoginUseCase.swift in Sources */,
+				27849EEC2AA989A20026EE9B /* MenuProfileTableViewCell.swift in Sources */,
 				277C108B2AA94D2A000F8DC1 /* FormLabel.swift in Sources */,
 				271AFF642AA8ADA000610D8B /* AuthEndpoint.swift in Sources */,
 				271AFF692AA8AFB500610D8B /* AppError.swift in Sources */,
@@ -461,9 +530,12 @@
 				27A5365B2AA879B100B39EB7 /* AppDelegate.swift in Sources */,
 				271AFF582AA8866200610D8B /* NetworkService.swift in Sources */,
 				271AFF7A2AA8B80F00610D8B /* AuthRepositoryProtocol.swift in Sources */,
+				27849EDE2AA975F70026EE9B /* HomeViewController.swift in Sources */,
 				271AFF8E2AA8E25200610D8B /* FormTextField.swift in Sources */,
+				27849EE32AA979590026EE9B /* SideMenuViewController.swift in Sources */,
 				271AFF892AA8C45F00610D8B /* SubmitButton.swift in Sources */,
 				271AFF6B2AA8B05500610D8B /* KeychainManager.swift in Sources */,
+				27849EF42AA9A26C0026EE9B /* MenuLogoutTableViewCell.swift in Sources */,
 				27849ED92AA9689F0026EE9B /* RegisterViewController.swift in Sources */,
 				271AFF7D2AA8BE2700610D8B /* LoginUseCaseProtocol.swift in Sources */,
 				271AFF5F2AA8ACB900610D8B /* LoginRequestModel.swift in Sources */,

@@ -14,5 +14,6 @@ struct Theme {
     struct FontName {
         static let regular = "Montserrat-Regular"
         static let semiBold = "Montserrat-SemiBold"
+        static let bold = "Montserrat-Bold"
     }
 }

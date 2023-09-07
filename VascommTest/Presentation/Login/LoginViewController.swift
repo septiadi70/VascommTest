@@ -43,7 +43,14 @@ class LoginViewController: UIViewController {
 extension LoginViewController {
     @IBAction func forgotButtonTapped(_ sender: UIButton) {}
     
-    @IBAction func loginButtonTapped(_ sender: UIButton) {}
+    @IBAction func loginButtonTapped(_ sender: UIButton) {
+        if let appDelegate,
+           let homeViewController = appDelegate.container.resolve(HomeViewController.self),
+           let sceneDelegate = view.window?.windowScene?.delegate as? SceneDelegate {
+            let navController = UINavigationController(rootViewController: homeViewController)
+            sceneDelegate.window?.rootViewController = navController
+        }
+    }
     
     @IBAction func registerButtonTapped(_ sender: UIButton) {
         if let registerViewController = appDelegate?

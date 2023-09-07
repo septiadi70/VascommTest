@@ -15,6 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let container = Container()
         container.register(LoginViewController.self) { _ in LoginViewController() }
         container.register(RegisterViewController.self) { _ in RegisterViewController() }
+        container.register(HomeViewController.self) { _ in HomeViewController() }
+        container.register(SideMenuViewController.self) { _ in SideMenuViewController() }
         return container
     }()
 
