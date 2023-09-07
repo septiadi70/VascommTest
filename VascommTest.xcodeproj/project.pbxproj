@@ -53,8 +53,6 @@
 		27849F0A2AA9BC380026EE9B /* SideMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27849F092AA9BC380026EE9B /* SideMenuViewModel.swift */; };
 		27A5365B2AA879B100B39EB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A5365A2AA879B100B39EB7 /* AppDelegate.swift */; };
 		27A5365D2AA879B100B39EB7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A5365C2AA879B100B39EB7 /* SceneDelegate.swift */; };
-		27A5365F2AA879B100B39EB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A5365E2AA879B100B39EB7 /* ViewController.swift */; };
-		27A536622AA879B100B39EB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27A536602AA879B100B39EB7 /* Main.storyboard */; };
 		27A536642AA879B200B39EB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27A536632AA879B200B39EB7 /* Assets.xcassets */; };
 		27A536672AA879B200B39EB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27A536652AA879B200B39EB7 /* LaunchScreen.storyboard */; };
 		8CB5164D8D80F535106FBE8C /* Pods_VascommTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 081951732D0169E88360F480 /* Pods_VascommTest.framework */; };
@@ -110,8 +108,6 @@
 		27A536572AA879B100B39EB7 /* VascommTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VascommTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27A5365A2AA879B100B39EB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27A5365C2AA879B100B39EB7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		27A5365E2AA879B100B39EB7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		27A536612AA879B100B39EB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		27A536632AA879B200B39EB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27A536662AA879B200B39EB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27A536682AA879B200B39EB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -405,8 +401,6 @@
 				271AFF552AA8823100610D8B /* Service */,
 				27A5365A2AA879B100B39EB7 /* AppDelegate.swift */,
 				27A5365C2AA879B100B39EB7 /* SceneDelegate.swift */,
-				27A5365E2AA879B100B39EB7 /* ViewController.swift */,
-				27A536602AA879B100B39EB7 /* Main.storyboard */,
 				27A536632AA879B200B39EB7 /* Assets.xcassets */,
 				27A536652AA879B200B39EB7 /* LaunchScreen.storyboard */,
 				27A536682AA879B200B39EB7 /* Info.plist */,
@@ -498,7 +492,6 @@
 				27A536672AA879B200B39EB7 /* LaunchScreen.storyboard in Resources */,
 				27849EED2AA989A20026EE9B /* MenuProfileTableViewCell.xib in Resources */,
 				27A536642AA879B200B39EB7 /* Assets.xcassets in Resources */,
-				27A536622AA879B100B39EB7 /* Main.storyboard in Resources */,
 				277C10BF2AA952E4000F8DC1 /* Montserrat-SemiBold.ttf in Resources */,
 				27849EF52AA9A26C0026EE9B /* MenuLogoutTableViewCell.xib in Resources */,
 				27849EF72AA9A5400026EE9B /* Montserrat-Medium.ttf in Resources */,
@@ -570,7 +563,6 @@
 				277C108B2AA94D2A000F8DC1 /* FormLabel.swift in Sources */,
 				271AFF642AA8ADA000610D8B /* AuthEndpoint.swift in Sources */,
 				271AFF692AA8AFB500610D8B /* AppError.swift in Sources */,
-				27A5365F2AA879B100B39EB7 /* ViewController.swift in Sources */,
 				27A5365B2AA879B100B39EB7 /* AppDelegate.swift in Sources */,
 				271AFF582AA8866200610D8B /* NetworkService.swift in Sources */,
 				271AFF7A2AA8B80F00610D8B /* AuthRepositoryProtocol.swift in Sources */,
@@ -599,14 +591,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		27A536602AA879B100B39EB7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				27A536612AA879B100B39EB7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		27A536652AA879B200B39EB7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -743,8 +727,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VascommTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -771,8 +754,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VascommTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
