@@ -48,6 +48,9 @@
 		27849EFF2AA9B52F0026EE9B /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27849EFE2AA9B52F0026EE9B /* StringExt.swift */; };
 		27849F022AA9B6F60026EE9B /* HUDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27849F012AA9B6F60026EE9B /* HUDView.swift */; };
 		27849F042AA9B78E0026EE9B /* HUDLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27849F032AA9B78E0026EE9B /* HUDLoadable.swift */; };
+		27849F062AA9BB640026EE9B /* MenuUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27849F052AA9BB640026EE9B /* MenuUseCaseProtocol.swift */; };
+		27849F082AA9BB6F0026EE9B /* MenuUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27849F072AA9BB6F0026EE9B /* MenuUseCase.swift */; };
+		27849F0A2AA9BC380026EE9B /* SideMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27849F092AA9BC380026EE9B /* SideMenuViewModel.swift */; };
 		27A5365B2AA879B100B39EB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A5365A2AA879B100B39EB7 /* AppDelegate.swift */; };
 		27A5365D2AA879B100B39EB7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A5365C2AA879B100B39EB7 /* SceneDelegate.swift */; };
 		27A5365F2AA879B100B39EB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A5365E2AA879B100B39EB7 /* ViewController.swift */; };
@@ -101,6 +104,9 @@
 		27849EFE2AA9B52F0026EE9B /* StringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
 		27849F012AA9B6F60026EE9B /* HUDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDView.swift; sourceTree = "<group>"; };
 		27849F032AA9B78E0026EE9B /* HUDLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDLoadable.swift; sourceTree = "<group>"; };
+		27849F052AA9BB640026EE9B /* MenuUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuUseCaseProtocol.swift; sourceTree = "<group>"; };
+		27849F072AA9BB6F0026EE9B /* MenuUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuUseCase.swift; sourceTree = "<group>"; };
+		27849F092AA9BC380026EE9B /* SideMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewModel.swift; sourceTree = "<group>"; };
 		27A536572AA879B100B39EB7 /* VascommTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VascommTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27A5365A2AA879B100B39EB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27A5365C2AA879B100B39EB7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -221,6 +227,8 @@
 			children = (
 				271AFF7C2AA8BE2700610D8B /* LoginUseCaseProtocol.swift */,
 				271AFF7E2AA8BE3700610D8B /* LoginUseCase.swift */,
+				27849F052AA9BB640026EE9B /* MenuUseCaseProtocol.swift */,
+				27849F072AA9BB6F0026EE9B /* MenuUseCase.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -333,6 +341,7 @@
 			children = (
 				27849EE12AA979590026EE9B /* SideMenuViewController.swift */,
 				27849EE22AA979590026EE9B /* SideMenuViewController.xib */,
+				27849F092AA9BC380026EE9B /* SideMenuViewModel.swift */,
 			);
 			path = SideMenu;
 			sourceTree = "<group>";
@@ -552,6 +561,7 @@
 				271AFF752AA8B66400610D8B /* AuthRemoteDataSource.swift in Sources */,
 				271AFF662AA8AF8F00610D8B /* RequestModelProtocol.swift in Sources */,
 				27849EF02AA99F6F0026EE9B /* MenuItemTableViewCell.swift in Sources */,
+				27849F0A2AA9BC380026EE9B /* SideMenuViewModel.swift in Sources */,
 				27849F042AA9B78E0026EE9B /* HUDLoadable.swift in Sources */,
 				27849F022AA9B6F60026EE9B /* HUDView.swift in Sources */,
 				271AFF7F2AA8BE3700610D8B /* LoginUseCase.swift in Sources */,
@@ -577,9 +587,11 @@
 				271AFF5F2AA8ACB900610D8B /* LoginRequestModel.swift in Sources */,
 				271AFF732AA8B65800610D8B /* AuthRemoteDataSourceProtocol.swift in Sources */,
 				27A5365D2AA879B100B39EB7 /* SceneDelegate.swift in Sources */,
+				27849F082AA9BB6F0026EE9B /* MenuUseCase.swift in Sources */,
 				271AFF782AA8B80500610D8B /* AuthRepository.swift in Sources */,
 				271AFF8B2AA8D67F00610D8B /* Theme.swift in Sources */,
 				271AFF5B2AA8AC6D00610D8B /* LoginResponse.swift in Sources */,
+				27849F062AA9BB640026EE9B /* MenuUseCaseProtocol.swift in Sources */,
 				271AFF622AA8ACEC00610D8B /* EndpointProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

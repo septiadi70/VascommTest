@@ -6,12 +6,21 @@
 //
 
 import UIKit
+import Combine
 
 fileprivate enum SideMenuSectionType {
     case profile, item, logout
 }
 
-class SideMenuViewController: UIViewController {
+protocol SideMenuViewControllerDelegate: AnyObject {
+    func sideMenuViewControllerDidLogout(viewController: SideMenuViewController)
+}
+
+class SideMenuViewController: UIViewController, HUDLoadable {
+    var viewModel: SideMenuViewModel
+    var bags = Set<AnyCancellable>()
+    let appDelegate = UIApplication.shared.delegate as? AppDelegate
+    weak var delegate: SideMenuViewControllerDelegate?
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -28,6 +37,15 @@ class SideMenuViewController: UIViewController {
         static let itemCell = "itemCell"
         static let logoutCell = "logoutCell"
     }
+    
+    init(viewModel: SideMenuViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: "SideMenuViewController", bundle: Bundle.main)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,8 +61,57 @@ class SideMenuViewController: UIViewController {
                            forCellReuseIdentifier: K.itemCell)
         tableView.register(UINib(nibName: "MenuLogoutTableViewCell", bundle: Bundle.main),
                            forCellReuseIdentifier: K.logoutCell)
+        
+        configBinding()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        viewModel.getToken()
     }
 }
+
+// MARK: - Methods
+
+extension SideMenuViewController {
+    func configBinding() {
+        viewModel
+            .$token
+            .receive(on: RunLoop.main)
+            .sink { [weak self] token in
+                guard let self, token == nil else { return }
+                self.delegate?.sideMenuViewControllerDidLogout(viewController: self)
+            }
+            .store(in: &bags)
+        
+        viewModel
+            .$error
+            .receive(on: RunLoop.main)
+            .sink { [weak self] error in
+                guard let self, let error else { return }
+                Alert.basicAlert(title: "Logout", message: error.localizedDescription.capitalized)
+                    .show(parentViewController: self)
+                self.viewModel.error = nil
+            }
+            .store(in: &bags)
+        
+        viewModel
+            .$isLoading
+            .receive(on: RunLoop.main)
+            .sink { [weak self] isLoading in
+                guard let self else { return }
+                if isLoading {
+                    self.showLoading("Logout...")
+                } else {
+                    self.hideLoading()
+                }
+            }
+            .store(in: &bags)
+    }
+}
+
+// MARK: - Actions
 
 extension SideMenuViewController {
     @IBAction func closeButtonTapped(_ sender: UIButton) {
@@ -88,11 +155,21 @@ extension SideMenuViewController: UITableViewDataSource, UITableViewDelegate {
         case .logout:
             let aCell = tableView.dequeueReusableCell(withIdentifier: K.logoutCell, for: indexPath)
             guard let cell = aCell as? MenuLogoutTableViewCell else { return aCell }
+            cell.delegate = self
             return cell
         }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+
+extension SideMenuViewController: MenuLogoutTableViewCellDelegate {
+    func menuLogoutTableViewCellDidButtonTapped(at cell: MenuLogoutTableViewCell) {
+        Alert.logoutAlert { [weak self] _ in
+            self?.viewModel.logout()
+        }
+        .show(parentViewController: self)
     }
 }

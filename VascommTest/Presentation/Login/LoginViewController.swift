@@ -59,8 +59,10 @@ extension LoginViewController {
         viewModel
             .$token
             .receive(on: RunLoop.main)
-            .sink { [weak self] _ in
-                self?.didLogin()
+            .sink { [weak self] token in
+                if token != nil {
+                    self?.didLogin()
+                }
             }
             .store(in: &bags)
         

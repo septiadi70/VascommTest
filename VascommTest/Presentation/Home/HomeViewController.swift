@@ -52,6 +52,7 @@ extension HomeViewController {
         else { return }
         
         viewController.modalPresentationStyle = .custom
+        viewController.delegate = self
         
         let transition = CATransition()
         transition.duration = 0.5
@@ -65,4 +66,15 @@ extension HomeViewController {
     @objc func cartButtonTapped(_ sender: UIBarButtonItem) {}
     
     @objc func notifButtonTapped(_ sender: UIBarButtonItem) {}
+}
+
+extension HomeViewController: SideMenuViewControllerDelegate {
+    func sideMenuViewControllerDidLogout(viewController: SideMenuViewController) {
+        if let appDelegate,
+           let loginViewController = appDelegate.container.resolve(LoginViewController.self),
+           let sceneDelegate = view.window?.windowScene?.delegate as? SceneDelegate {
+            let navController = UINavigationController(rootViewController: loginViewController)
+            sceneDelegate.window?.rootViewController = navController
+        }
+    }
 }

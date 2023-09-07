@@ -31,7 +31,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         container.register(RegisterViewController.self) { _ in RegisterViewController() }
         container.register(HomeViewController.self) { _ in HomeViewController() }
-        container.register(SideMenuViewController.self) { _ in SideMenuViewController() }
+        
+        container.register(MenuUseCaseProtocol.self) { r in
+            MenuUseCase(repository: r.resolve(AuthRepositoryProtocol.self)!)
+        }
+        container.register(SideMenuViewModel.self) { r in
+            SideMenuViewModel(useCase: r.resolve(MenuUseCaseProtocol.self)!)
+        }
+        container.register(SideMenuViewController.self) { r in
+            SideMenuViewController(viewModel: r.resolve(SideMenuViewModel.self)!)
+        }
         return container
     }()
 
