@@ -6,4 +6,9 @@
 //
 
 import Foundation
+import Combine
 
+protocol LoginUseCaseProtocol {
+    func login(email: String, password: String) -> AnyPublisher<LoginResponse, Error>
+    func saveToken(token: String) -> AnyPublisher<String, Error>
+}

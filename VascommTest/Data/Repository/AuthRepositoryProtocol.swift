@@ -12,4 +12,5 @@ protocol AuthRepositoryProtocol {
     func getToken() -> String?
     func login(model: LoginRequestModel) -> AnyPublisher<LoginResponse, Error>
     func logout() -> AnyPublisher<Bool, Error>
+    func saveToken(token: String) -> AnyPublisher<String, Error>
 }

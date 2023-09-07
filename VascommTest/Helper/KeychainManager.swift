@@ -37,7 +37,7 @@ final class KeychainManager {
 
 extension KeychainManager {
     func setToken(_ token: String?) throws {
-        if let token {
+        if let token, !token.isEmpty {
             try set(key: "token", value: token)
         } else {
             try remove(key: "token")

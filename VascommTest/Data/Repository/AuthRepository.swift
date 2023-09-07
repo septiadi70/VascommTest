@@ -35,4 +35,15 @@ final class AuthRepository: AuthRepositoryProtocol {
             }
         }.eraseToAnyPublisher()
     }
+    
+    func saveToken(token: String) -> AnyPublisher<String, Error> {
+        return Future<String, Error> { [weak self] completion in
+            do {
+                try self?.keychain.setToken(token)
+                completion(.success(token))
+            } catch {
+                completion(.failure(error))
+            }
+        }.eraseToAnyPublisher()
+    }
 }

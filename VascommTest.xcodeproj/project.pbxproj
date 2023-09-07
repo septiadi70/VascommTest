@@ -43,6 +43,11 @@
 		27849EF42AA9A26C0026EE9B /* MenuLogoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27849EF22AA9A26C0026EE9B /* MenuLogoutTableViewCell.swift */; };
 		27849EF52AA9A26C0026EE9B /* MenuLogoutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27849EF32AA9A26C0026EE9B /* MenuLogoutTableViewCell.xib */; };
 		27849EF72AA9A5400026EE9B /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 27849EF62AA9A5400026EE9B /* Montserrat-Medium.ttf */; };
+		27849EFA2AA9AC470026EE9B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27849EF92AA9AC470026EE9B /* LoginViewModel.swift */; };
+		27849EFC2AA9B3F60026EE9B /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27849EFB2AA9B3F60026EE9B /* Alert.swift */; };
+		27849EFF2AA9B52F0026EE9B /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27849EFE2AA9B52F0026EE9B /* StringExt.swift */; };
+		27849F022AA9B6F60026EE9B /* HUDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27849F012AA9B6F60026EE9B /* HUDView.swift */; };
+		27849F042AA9B78E0026EE9B /* HUDLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27849F032AA9B78E0026EE9B /* HUDLoadable.swift */; };
 		27A5365B2AA879B100B39EB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A5365A2AA879B100B39EB7 /* AppDelegate.swift */; };
 		27A5365D2AA879B100B39EB7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A5365C2AA879B100B39EB7 /* SceneDelegate.swift */; };
 		27A5365F2AA879B100B39EB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A5365E2AA879B100B39EB7 /* ViewController.swift */; };
@@ -91,6 +96,11 @@
 		27849EF22AA9A26C0026EE9B /* MenuLogoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuLogoutTableViewCell.swift; sourceTree = "<group>"; };
 		27849EF32AA9A26C0026EE9B /* MenuLogoutTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuLogoutTableViewCell.xib; sourceTree = "<group>"; };
 		27849EF62AA9A5400026EE9B /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		27849EF92AA9AC470026EE9B /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		27849EFB2AA9B3F60026EE9B /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		27849EFE2AA9B52F0026EE9B /* StringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
+		27849F012AA9B6F60026EE9B /* HUDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDView.swift; sourceTree = "<group>"; };
+		27849F032AA9B78E0026EE9B /* HUDLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDLoadable.swift; sourceTree = "<group>"; };
 		27A536572AA879B100B39EB7 /* VascommTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VascommTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27A5365A2AA879B100B39EB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27A5365C2AA879B100B39EB7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -169,9 +179,12 @@
 		271AFF672AA8AFA700610D8B /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				27849EFD2AA9B5220026EE9B /* Extension */,
 				271AFF682AA8AFB500610D8B /* AppError.swift */,
 				271AFF6A2AA8B05500610D8B /* KeychainManager.swift */,
 				271AFF8A2AA8D67F00610D8B /* Theme.swift */,
+				27849EFB2AA9B3F60026EE9B /* Alert.swift */,
+				27849F032AA9B78E0026EE9B /* HUDLoadable.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -229,6 +242,7 @@
 			children = (
 				271AFF822AA8C32E00610D8B /* LoginViewController.swift */,
 				271AFF832AA8C32E00610D8B /* LoginViewController.xib */,
+				27849EF92AA9AC470026EE9B /* LoginViewModel.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -236,6 +250,7 @@
 		271AFF862AA8C3D200610D8B /* SubView */ = {
 			isa = PBXGroup;
 			children = (
+				27849F002AA9B6E70026EE9B /* View */,
 				27849EE92AA989830026EE9B /* TableCell */,
 				277C10892AA94D19000F8DC1 /* Label */,
 				271AFF8C2AA8E23C00610D8B /* TextField */,
@@ -333,6 +348,22 @@
 				27849EF32AA9A26C0026EE9B /* MenuLogoutTableViewCell.xib */,
 			);
 			path = TableCell;
+			sourceTree = "<group>";
+		};
+		27849EFD2AA9B5220026EE9B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				27849EFE2AA9B52F0026EE9B /* StringExt.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		27849F002AA9B6E70026EE9B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				27849F012AA9B6F60026EE9B /* HUDView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		27A5364E2AA879B100B39EB7 = {
@@ -521,8 +552,11 @@
 				271AFF752AA8B66400610D8B /* AuthRemoteDataSource.swift in Sources */,
 				271AFF662AA8AF8F00610D8B /* RequestModelProtocol.swift in Sources */,
 				27849EF02AA99F6F0026EE9B /* MenuItemTableViewCell.swift in Sources */,
+				27849F042AA9B78E0026EE9B /* HUDLoadable.swift in Sources */,
+				27849F022AA9B6F60026EE9B /* HUDView.swift in Sources */,
 				271AFF7F2AA8BE3700610D8B /* LoginUseCase.swift in Sources */,
 				27849EEC2AA989A20026EE9B /* MenuProfileTableViewCell.swift in Sources */,
+				27849EFF2AA9B52F0026EE9B /* StringExt.swift in Sources */,
 				277C108B2AA94D2A000F8DC1 /* FormLabel.swift in Sources */,
 				271AFF642AA8ADA000610D8B /* AuthEndpoint.swift in Sources */,
 				271AFF692AA8AFB500610D8B /* AppError.swift in Sources */,
@@ -535,9 +569,11 @@
 				27849EE32AA979590026EE9B /* SideMenuViewController.swift in Sources */,
 				271AFF892AA8C45F00610D8B /* SubmitButton.swift in Sources */,
 				271AFF6B2AA8B05500610D8B /* KeychainManager.swift in Sources */,
+				27849EFC2AA9B3F60026EE9B /* Alert.swift in Sources */,
 				27849EF42AA9A26C0026EE9B /* MenuLogoutTableViewCell.swift in Sources */,
 				27849ED92AA9689F0026EE9B /* RegisterViewController.swift in Sources */,
 				271AFF7D2AA8BE2700610D8B /* LoginUseCaseProtocol.swift in Sources */,
+				27849EFA2AA9AC470026EE9B /* LoginViewModel.swift in Sources */,
 				271AFF5F2AA8ACB900610D8B /* LoginRequestModel.swift in Sources */,
 				271AFF732AA8B65800610D8B /* AuthRemoteDataSourceProtocol.swift in Sources */,
 				27A5365D2AA879B100B39EB7 /* SceneDelegate.swift in Sources */,

@@ -13,7 +13,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     let container: Container = {
         let container = Container()
-        container.register(LoginViewController.self) { _ in LoginViewController() }
+        container.register(AuthRemoteDataSourceProtocol.self) { _ in
+            AuthRemoteDataSource(networkService: NetworkService.shared)
+        }
+        container.register(AuthRepositoryProtocol.self) { r in
+            AuthRepository(remote: r.resolve(AuthRemoteDataSourceProtocol.self)!,
+                           keychain: KeychainManager.shared)
+        }
+        container.register(LoginUseCaseProtocol.self) { r in
+            LoginUseCase(repository: r.resolve(AuthRepositoryProtocol.self)!)
+        }
+        container.register(LoginViewModel.self) { r in
+            LoginViewModel(useCase: r.resolve(LoginUseCaseProtocol.self)!)
+        }
+        container.register(LoginViewController.self) { r in
+            LoginViewController(viewModel: r.resolve(LoginViewModel.self)!)
+        }
         container.register(RegisterViewController.self) { _ in RegisterViewController() }
         container.register(HomeViewController.self) { _ in HomeViewController() }
         container.register(SideMenuViewController.self) { _ in SideMenuViewController() }
